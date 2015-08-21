@@ -16,7 +16,7 @@ public class ProdutoDetalheServlet extends HttpServlet {
         Integer id = Integer.parseInt(request.getParameter("id"));
         IProdutoManager manager = new ProdutoManager();
         Produto produtoEscolhido = manager.obterPorId(id);
-        System.out.print(produto);
+        System.out.println("");
         if(produtoEscolhido == null){
             request.setAttribute("msg","Erro, produto não encontrado");
             request.getRequestDispatcher("/WEB-INF/jsp/produtos-lista.jsp").forward(request, response);
