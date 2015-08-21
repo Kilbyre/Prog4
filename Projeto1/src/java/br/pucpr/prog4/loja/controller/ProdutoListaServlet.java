@@ -19,7 +19,7 @@ public class ProdutoListaServlet extends HttpServlet {
         IProdutoManager PM = new ProdutoManager();
         List<Produto> produtos = PM.obterProdutos();
         request.setAttribute("produtos", produtos);
-        request.getRequestDispatcher("/WEB-INF/jsp/produtos-lista").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/jsp/produtos-lista.jsp").forward(request, response);
     }
     
 }
