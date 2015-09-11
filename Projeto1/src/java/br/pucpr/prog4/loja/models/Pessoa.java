@@ -1,16 +1,16 @@
 package br.pucpr.prog4.loja.models;
 import java.util.Date;
-public class Cliente {
-    private Integer idCliente;
+public class Pessoa {
+    private Integer idPessoa;
     private String nomeCliente;
     private String tipoCliente;
     private Date dataNascimento;
     private String sexo;
     private String comentarios;
     private Integer CPF;
-    public Cliente() {}
-    public Cliente(Integer idCliente, String nomeCliente, String tipoCliente, Date dataNascimento, String sexo, String comentarios, Integer CPF) {
-        this.idCliente = idCliente;
+    public Pessoa() {}
+    public Pessoa(Integer idPessoa, String nomeCliente, String tipoCliente, Date dataNascimento, String sexo, String comentarios, Integer CPF) {
+        this.idPessoa = idPessoa;
         this.nomeCliente = nomeCliente;
         this.tipoCliente= tipoCliente;
         this.dataNascimento = dataNascimento;
@@ -18,8 +18,8 @@ public class Cliente {
         this.comentarios = comentarios;
         this.CPF = CPF;
     }
-    public Integer getIdCliente() {
-        return idCliente;
+    public Integer getIdPessoa() {
+        return idPessoa;
     }
     public String getNomeCliente() {
         return nomeCliente;
@@ -36,8 +36,8 @@ public class Cliente {
     public String getComentarios() {
         return comentarios;
     }
-    public void setIdCliente(Integer idCliente) {
-        this.idCliente = idCliente;
+    public void setIdPessoa(Integer idPessoa) {
+        this.idPessoa = idPessoa;
     }
     public void setNomeCliente(String nomeCliente) {
         this.nomeCliente = nomeCliente;
@@ -62,6 +62,6 @@ public class Cliente {
     }
     @Override
     public String toString() {
-        return "Cliente{" + "idCliente=" + idCliente + ", nomeCliente=" + nomeCliente + ", tipoCliente=" + tipoCliente + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", comentarios=" + comentarios + '}';
+        return "Pessoa(" + "idPessoa=" + idPessoa + ", nomeCliente=" + nomeCliente + ", tipoCliente=" + tipoCliente + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", comentarios=" + comentarios + '}';
     }
 }

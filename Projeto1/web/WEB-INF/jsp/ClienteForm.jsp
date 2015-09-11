@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1 style="text-align:center;">Meu Cadastro</h1>
-        <form style="text-align:center;" action="" method="POST" action="/cliente/cadastro">
+        <form style="text-align:center;" action="" method="POST" action="/pessoa/cadastro">
             <label for="Pessoa Fisica">Pessoa Fisica </label>
             <input type="radio" name="tipoPessoa" value="PF" />
             

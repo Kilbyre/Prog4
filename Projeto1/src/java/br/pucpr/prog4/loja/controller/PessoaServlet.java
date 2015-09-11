@@ -1,6 +1,7 @@
 package br.pucpr.prog4.loja.controller;
 
-import br.pucpr.prog4.loja.models.Cliente;
+import br.pucpr.prog4.loja.models.Pessoa;
+import br.pucpr.prog4.loja.models.PessoaManagerImpl;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
@@ -11,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ClienteServlet extends HttpServlet {
+public class PessoaServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
@@ -22,19 +23,22 @@ public class ClienteServlet extends HttpServlet {
     
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
-        Cliente c = new Cliente();
-        c.setTipoPessoa(request.getParameter("tipoCliente"));
-        c.setNomeCliente(request.getParameter("nomeCliente"));
-        c.setSexo(request.getParameter("sexo"));
-        c.setComentarios(request.getParameter("comentarios"));
+        Pessoa p = new Pessoa();
+        p.setTipoPessoa(request.getParameter("tipoCliente"));
+        p.setNomeCliente(request.getParameter("nomeCliente"));
+        p.setSexo(request.getParameter("sexo"));
+        p.setComentarios(request.getParameter("comentarios"));
         
-        c.setCPF(Integer.parseInt(request.getParameter("CPF")));
+        p.setCPF(Integer.parseInt(request.getParameter("CPF")));
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try{
-            c.setDataNascimento(sdf.parse(request.getParameter("dataNascimento")));
+            p.setDataNascimento(sdf.parse(request.getParameter("dataNascimento")));
         }catch(Exception e){
             e.printStackTrace();
         }
+        
+        PessoaManagerImpl pmi = new PessoaManagerImpl();
+        pmi.Cadastrar(p);
         
     }
     
