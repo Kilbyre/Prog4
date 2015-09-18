@@ -2,17 +2,17 @@ package br.pucpr.prog4.loja.models;
 import java.util.Date;
 public class Pessoa {
     private Integer idPessoa;
-    private String nomeCliente;
-    private String tipoCliente;
+    private String nomePessoa;
+    private String tipoPessoa;
     private Date dataNascimento;
     private String sexo;
     private String comentarios;
     private Integer CPF;
     public Pessoa() {}
-    public Pessoa(Integer idPessoa, String nomeCliente, String tipoCliente, Date dataNascimento, String sexo, String comentarios, Integer CPF) {
+    public Pessoa(Integer idPessoa, String nomePessoa, String tipoPessoa, Date dataNascimento, String sexo, String comentarios, Integer CPF) {
         this.idPessoa = idPessoa;
-        this.nomeCliente = nomeCliente;
-        this.tipoCliente= tipoCliente;
+        this.nomePessoa = nomePessoa;
+        this.tipoPessoa= tipoPessoa;
         this.dataNascimento = dataNascimento;
         this.sexo = sexo;
         this.comentarios = comentarios;
@@ -21,11 +21,11 @@ public class Pessoa {
     public Integer getIdPessoa() {
         return idPessoa;
     }
-    public String getNomeCliente() {
-        return nomeCliente;
+    public String getNomePessoa() {
+        return nomePessoa;
     }
-    public String getTipoCliente() {
-        return tipoCliente;
+    public String getTipoPessoa() {
+        return tipoPessoa;
     }
     public Date getDataNascimento() {
         return dataNascimento;
@@ -39,11 +39,11 @@ public class Pessoa {
     public void setIdPessoa(Integer idPessoa) {
         this.idPessoa = idPessoa;
     }
-    public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
+    public void setNomePessoa(String nomePessoa) {
+        this.nomePessoa = nomePessoa;
     }
-    public void setTipoPessoa(String tipoCliente) {
-        this.tipoCliente = tipoCliente;
+    public void setTipoPessoa(String tipoPessoa) {
+        this.tipoPessoa = tipoPessoa;
     }
     public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
@@ -62,6 +62,7 @@ public class Pessoa {
     }
     @Override
     public String toString() {
-        return "Pessoa(" + "idPessoa=" + idPessoa + ", nomeCliente=" + nomeCliente + ", tipoCliente=" + tipoCliente + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", comentarios=" + comentarios + '}';
+        return "Pessoa(" + "idPessoa=" + idPessoa + ", nomePessoa=" + nomePessoa + ", tipoPessoa=" + tipoPessoa + ", dataNascimento=" + dataNascimento + ", sexo=" + sexo + ", comentarios=" + comentarios + '}';
     }
+
 }

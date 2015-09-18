@@ -12,6 +12,10 @@
         <servlet-name>PessoaServlet</servlet-name>
         <servlet-class>br.pucpr.prog4.loja.controller.PessoaServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CarroServlet</servlet-name>
+        <servlet-class>br.pucpr.prog4.oficina.controller.CarroServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProdutoListaServlet</servlet-name>
         <url-pattern>/produto/lista</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>PessoaServlet</servlet-name>
         <url-pattern>/pessoa/cadastro</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/carro/cadastro</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

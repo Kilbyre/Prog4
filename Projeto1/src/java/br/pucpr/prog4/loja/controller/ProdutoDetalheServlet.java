@@ -11,8 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class ProdutoDetalheServlet extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Integer id = Integer.parseInt(request.getParameter("id"));
         IProdutoManager manager = new ProdutoManager();
         Produto produtoEscolhido = manager.obterPorId(id);
@@ -24,8 +23,5 @@ public class ProdutoDetalheServlet extends HttpServlet {
             request.setAttribute("produtoEscolhido", produtoEscolhido);
         request.getRequestDispatcher("/WEB-INF/jsp/produtos-lista.jsp").forward(request, response);
         }
-        
-        
-        
     }
 }

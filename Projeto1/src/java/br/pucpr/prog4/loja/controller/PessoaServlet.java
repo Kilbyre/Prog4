@@ -24,19 +24,21 @@ public class PessoaServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         
         Pessoa p = new Pessoa();
-        p.setTipoPessoa(request.getParameter("tipoCliente"));
-        p.setNomeCliente(request.getParameter("nomeCliente"));
+        p.setTipoPessoa(request.getParameter("tipoPessoa"));
+        p.setNomePessoa(request.getParameter("nomePessoa"));
         p.setSexo(request.getParameter("sexo"));
         p.setComentarios(request.getParameter("comentarios"));
         
+        
         p.setCPF(Integer.parseInt(request.getParameter("CPF")));
+        
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         try{
             p.setDataNascimento(sdf.parse(request.getParameter("dataNascimento")));
         }catch(Exception e){
             e.printStackTrace();
         }
-        
+        System.out.println("PESSOA SERVLET");
         PessoaManagerImpl pmi = new PessoaManagerImpl();
         pmi.Cadastrar(p);
         

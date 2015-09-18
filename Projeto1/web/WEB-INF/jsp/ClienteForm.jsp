@@ -35,7 +35,7 @@
             <br><br>
             
             <label for="DataNascimento">Comentarios: </label><br>
-            <textarea cols="50" rows="5" name="comentario"> </textarea>
+            <textarea cols="50" rows="5" name="comentarios"></textarea>
             <br><br>
             
             <input type="submit" value="Salvar" />
